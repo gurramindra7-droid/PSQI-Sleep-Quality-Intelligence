@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="description" content="PSQI — SLEEP QUALITY INTELLIGENCE. An independent digital implementation of the Pittsburgh Sleep Quality Index." />
+    <title>PSQI — SLEEP QUALITY INTELLIGENCE</title>
+    <script>
+      // Apply the saved theme before first paint so the page never flashes the wrong one.
+      try {
+        var t = localStorage.getItem('psqi-theme');
+        document.documentElement.dataset.theme = t === 'light' || t === 'dark' ? t : 'dark';
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
